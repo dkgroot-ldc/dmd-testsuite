@@ -925,3 +925,14 @@ version (NetBSD)
      return q;
     }
 }
+version (DragonFlyBSD)
+{
+    import core.stdc.time;
+
+    double dtime()
+    {
+      double q;
+      q = cast(double)time(null);
+      return q;
+    }
+}
